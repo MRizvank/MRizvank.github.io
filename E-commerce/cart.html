@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <style>
+      /* Write all necessery css here  */
+      *{
+        box-sizing: border-box;
+      }
+      #cart-container>div>button+p{
+        display: inline;
+        margin: 0px 5px ;
+      }
+      #cart-container>div>:nth-child(9){
+        margin-left: 5px;
+
+      }
+      #cart-container{
+        display: grid;
+        width: 90%;
+        margin: auto;
+        gap: 25px;
+        grid-template-columns: repeat(4,1fr);
+        
+      }
+      img{
+        width: 100%;
+        border-radius:8px ;
+      }
+      #cart-container>div{
+        padding:0px 0px 0px  10px;
+        border-radius: 8px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+      #cart-container>div>h2{
+        font-size: 20px;
+      }
+      #cart-container>div>button{
+        margin: auto;
+        height: 30px;
+        margin-bottom: 15px;
+        border: 0px;
+        background-color: #2196F3;
+        color: white;
+      }
+      .nav{
+        border-radius: 8px;
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-template-columns: repeat(3,1fr);
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        align-items: center;
+      }
+      #total{
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: right;
+        
+        width: 90%;
+       margin: auto;
+      }
+      @media screen and (min-width:600px) and (max-width:800px) {
+        #cart-container{
+          grid-template-columns: repeat(3,1fr);
+        }
+      }
+      @media screen and (min-width:350px) and (max-width:599px) {
+        #cart-container{
+          grid-template-columns: repeat(2,1fr);
+        }
+      }
+      @media screen and (max-width:349px) {
+        #cart-container{
+          grid-template-columns: repeat(1,1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Masai E-Commerce</h1>
+      <a href="./index.html">Home</a>
+      <a href="./cart.html">Cart</a>
+    </div>
+    <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
+    <div id="cart-container">
+      <!-- Here Append All the cart Products  -->
+    </div>
+  </body>
+  <script>
+    // Write all necessery JS here 
+    let cartData=JSON.parse(localStorage.getItem("cart"))||[];
+    let total=document.getElementById("cart-total");
+    let cart=document.getElementById("cart-container")
+    showData(cartData);
+
+    function showData(data){
+      cart.innerHTML=null;
+      data.forEach((product,index) => {
+        let card=document.createElement("div");
+        let image=document.createElement("img");
+        let brand=document.createElement("h2");
+        let pice =document.createElement("h2");
+        let detail=document.createElement("p");
+        let category=document.createElement("p");
+        let button=document.createElement("button");
+        let add=document.createElement("button");
+        let sub=document.createElement("button")
+        let qty=document.createElement("span")
+        image.setAttribute("src", product.img);
+        brand.innerText=product.brand;
+        pice.innerText="₹"+product.price;
+        detail.innerText=product.details;
+        category.innerText=product.category;
+        button.innerText="Remove";
+        add.innerText="+";
+        sub.innerText="-";
+        qty.innerText=product.quantity;
+        add.addEventListener("click",()=>{
+          product.quantity++;
+          localStorage.setItem("cart",JSON.stringify(cartData));
+          showData(cartData);
+          showTotal(cartData); 
+        })
+        sub.addEventListener("click",()=>{
+          product.quantity--;
+          localStorage.setItem("cart",JSON.stringify(cartData));
+          showData(cartData);
+          showTotal(cartData); 
+        })
+        button.addEventListener("click",()=>{
+          cartData.splice(index,1);
+          localStorage.setItem("cart",JSON.stringify(cartData));
+          showData(cartData);
+          showTotal(cartData); 
+
+        })
+        card.append(image,brand,pice,detail,category,add,qty,sub,button);
+        cart.append(card);
+      });
+    }
+    console.log(cartData);
+ 
+    function showTotal(data){
+      total.innerText=null;
+      let price=0;
+     data.forEach((product)=>{
+      price+=product.quantity*product.price;
+      
+     })
+     total.innerText=price;
+     }
+     showTotal(cartData); 
+    
+  </script>
+</html>
