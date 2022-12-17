@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PUBLIC API's</title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="./CSS/index.css">
     <link href="./icon/logo-white.png" rel="icon">
 </head>
@@ -20,90 +19,6 @@
         <input type="submit" value="SEARCH" >
     </form>
     <div id="container">
-=======
-    <style>
-     
-        #container{
-            width: 90%;
-            display: grid;
-            margin: auto;
-            grid-template-columns: repeat(4,1fr);
-         
-            gap: 20px;
-        }
-        #container>div{
-           
-            background-color:#212121;
-            color: white;
-            border-radius: 3%;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
-        }
-       body{
-            font-family: "montserrat", sans-serif;
-           background-color: #E0E0E0;
-        text-align: center;
-       }
-        @media screen  and (min-width:450px ) and (max-width:800px){
-            #container{
-                grid-template-columns: repeat(2,1fr);
-            }
-            
-        }
-        @media screen and (max-width:449px){
-            #container{
-                grid-template-columns: repeat(1,1fr);
-            }
-            
-        }
-    </style>
-</head>
-<body>
-    <h1>COLLECTION OF PUBLIC API'S</h1>
-<!--     <p>Kindly please wait for 1 minutes its a large collection of data it will take some time ......</p> -->
-    <div id="container">
-
->>>>>>> 193d6b9b1b9ab21a0d25a3f6b12c24aa55df1f57
-    </div>
-</body>
 <script src="./scripts/index.js"></script>
-
-<<<<<<< HEAD
 </html>
-=======
 
-fetch("https://api.publicapis.org/entries")
-.then((response)=>{
-    return response.json();
-})
-.then((res)=>{
-    console.log(res.entries)
-    showData(res.entries)
-})
-.catch((error)=>{
-    console.log(error)
-})
-
-
-function showData(data){
-    body.innerHTML=null
-    data.forEach((element) => {
-        let card=document.createElement("div")
-        let name=document.createElement("h2")
-        let description =document.createElement("p")
-        let link=document.createElement("a");
-        let category=document.createElement("h3");
-        name.innerText=element.API;
-        description.innerText=element.Description;
-        link.setAttribute("href",element.Link)
-        link.innerText="click here"
-        category.innerText=element.Category;
-        card.append(name,description,link,category)
-        body.append(card);
-
-        
-    });
-}
-
-</script>
-</html>
->>>>>>> 193d6b9b1b9ab21a0d25a3f6b12c24aa55df1f57
