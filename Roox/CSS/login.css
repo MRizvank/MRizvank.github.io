@@ -1,0 +1,63 @@
+
+*{
+    font-family:  "montserrat", sans-serif
+}
+.container{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    border-top: 1px dotted black ;
+    border-left:  1px dotted black ;
+    border-right:  1px dotted black ;
+    border-bottom: 1px dotted black  ;
+ 
+
+}
+hr{
+    border-top: 1px dotted black;
+    
+}
+.social{
+    justify-content: space-between;
+    display: flex;
+   width: 50%;
+   margin: auto;
+  
+ 
+}
+#facebook{
+    color: white;
+    font-family:  "montserrat", sans-serif;
+    background-color: #3c55a2;
+    line-height: 46px;
+    font-weight: 500;
+    width: 45%;
+  
+}
+#google{
+    border: 1px solid black;
+    line-height: 46px;
+    width: 45%;
+}
+input[type="email"]
+,input[type="password"]{
+    width:50%   ;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f6f6f6;
+    border: 0px;
+    font-weight: bold;
+    padding-left: 50px;
+    
+}
+ input[type="submit"]{
+    width:50%   ;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #333333;
+    border: 0px;
+    font-weight: bold;
+    color: white;
+
+}
