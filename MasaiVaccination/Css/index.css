@@ -3,15 +3,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* background-color: black; */
-    /* border: 1px solid rgb(224, 56, 56); */
+    font-family: "Montserrat",sans-serif;
 }
 .logo{
     width:10%;
     cursor: pointer;
 }
 li,a,button{
-    font-family: "Montserrat",sans-serif;
+ 
     font-weight: 500;
     font-size: 16px;
     color: #ecf0f1;
@@ -24,7 +23,7 @@ header{
     padding: 10px 10%;
     background-color: #006666;
     /* position: fixed;
-    z-index: 10000; */
+    z-index: 10000;  */
 
 }
 ._links{
@@ -51,13 +50,7 @@ button{
 button:hover{
     background-color: rgba(0,179,179,0.8);
 }
-.banner{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url(/Images/banner.jpg);
-    background-size: cover;
-}
+
 hr{
     height: 3px;
     background-color: #004d4d ;
@@ -72,4 +65,39 @@ footer p{
     padding: 10px 10px;
     text-align: center;
     color: #ecf0f1;
+}
+#link{
+    color: #e6ffff;
+    padding-left: 5px;
+}
+
+
+.bg-image {
+    width: 100%;
+    height: 600px;
+    background-image: url("https://img.freepik.com/free-vector/realistic-coronavirus-background_52683-46586.jpg?w=826&t=st=1673459722~exp=1673460322~hmac=d8d809588023c6b36cae6131af6bf84b7528269aafce4e3d3390ae47324ac7c7");
+
+    /* Add the blur effect */
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-text {
+    color: white;
+    font-weight: 900;
+    line-height: 35px;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 10px;
+    font-size: larger;
+    text-align: center;
 }

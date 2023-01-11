@@ -7,11 +7,12 @@
     <title>Vaccinated</title>
     <link rel="stylesheet" href="./Css/index.css">
     <link rel="stylesheet" href="./Css/vaccinated.css">
+    <link rel="stylesheet" href="./Css/dashboard.css">
 
 </head>
 <body>
     <header>
-        <img class="logo" src="/Images/masai-logo.png" alt="logo">
+        <img class="logo" src="./Images/masai-logo.png" alt="logo">
         <nav>
             <ul class="_links">
                 <li><a href="./index.html">Home</a></li>
@@ -22,6 +23,29 @@
         <a href="./Registration.html" class="rgst"><button>Register</button></a>
     </header>
     <main>
+      
+      <div class="filter">
+        <select name="by-vaccine" id="by_vaccine" title="vaccine">
+          <option value="">filter by vaccine</option>
+          <option value="Covishield">Covishield</option>
+          <option value="Covaxin"> Covaxin</option>
+          <option value="Sputnik">Sputnik</option>
+        </select>
+        <select name="by-age" id="by_age" title="age">
+          <option value="">sort by age</option>
+          <option value="Ascending">Ascending</option>
+          <option value="Descending">Descending</option>
+        </select>
+        <select name="by-priority" id="by_priority" title="priority">
+          <option value="">filter by priority</option>
+          <option value="p0">p0</option>
+          <option value="p1">p1</option>
+          <option value="p2">p2</option>
+          <option value="p3">p3</option>
+        </select>
+  
+      </div>
+      <h2>Vaccinated Users Table </h2>
         <table id="details">
             <thead>
               <tr>
@@ -39,11 +63,11 @@
           </table>
 
     </main>
-    <!-- <hr>
+    <hr>
     <footer>
         <p><a href="https://mrizvank.github.io/Resume">Check my profile</a></p>
         <p>Copyright © 2023 Rizvan. All Rights Reserved</p>
-    </footer> -->
+    </footer>
     
 </body>
 <script src="./Scripts/vaccinated.js"></script>

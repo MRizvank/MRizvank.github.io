@@ -4,6 +4,7 @@
  box-sizing: border-box;
  margin: 0;
  padding: 0;
+ font-family: "Montserrat",sans-serif;
 }
 h2{
     text-align: center;
@@ -35,14 +36,19 @@ input{
     border: 2px solid black;
  
 }
-#submit{
+input[type="submit"]{
     border: 0;
     border-radius: 50px;
     background-color: rgba(0, 102, 102, 1);
     color: #ecf0f1;
     font-weight: bold;
 }
-#submit:hover{
+#btn:hover{
     background-color: rgba(0, 153, 153, 0.8);
-
+}
+main{
+    height: 70vh;
+}
+hr{
+    margin-top: 20px;
 }
