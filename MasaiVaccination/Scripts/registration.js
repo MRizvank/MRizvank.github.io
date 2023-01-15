@@ -20,6 +20,7 @@ document.getElementById("registration").addEventListener("submit", (e) => {
         otp: otp = otpGenerator(),
     }
     validate(obj);
+    document.getElementById("registration").reset()
 
 });
 function idGenerator() {
