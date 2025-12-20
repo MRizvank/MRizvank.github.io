@@ -1,0 +1,15 @@
+/* TEAM */
+Developer: Rizvan
+Role: Senior Software Engineer (Backend)
+Location: Kerala, India
+Website: https://rizvan.is-a.dev
+/* TECHNOLOGY */
+Frontend: React
+Backend Expertise: Node.js, NestJS
+Database: MongoDB
+Caching: Redis
+Realtime: WebSockets
+Hosting: Netlify
+
+/* THANKS */
+Thanks for visiting.
