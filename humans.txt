@@ -2,7 +2,7 @@
 Developer: Rizvan
 Role: Senior Software Engineer (Backend)
 Location: Kerala, India
-Website: https://rizvan.is-a.dev
+Website: https://rizvan.is-a.dev/
 /* TECHNOLOGY */
 Frontend: React
 Backend Expertise: Node.js, NestJS
